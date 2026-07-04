@@ -5,28 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proof — Source Layer</title>
 <meta name="description" content="Real Bullhorn cleanup experience inside a live staffing agency: records, structure, workflows, and adoption. How I work and what to expect.">
+<meta property="og:title" content="Proof — Source Layer">
+<meta property="og:description" content="Done inside a live agency, not from a slide deck. Real Bullhorn cleanup work: records, structure, workflows, adoption.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sourcelayer.co/proof.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c1613'/%3E%3Cpath d='M32 14 12 24l20 10 20-10-20-10Z' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='m12 34 20 10 20-10' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.6'/%3E%3Cpath d='m12 44 20 10 20-10' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=Source+Serif+4:ital,opsz,wght@0,8..60,500..700;1,8..60,500..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header>
-  <nav class="nav">
-    <a class="logo" href="index.html">Source<span>Layer</span></a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 3.5 8 12 12.5 20.5 8 12 3.5Z" stroke="#14724d" stroke-width="1.7" stroke-linejoin="round"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".65"/><path d="m3.5 17 8.5 4.5L20.5 17" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/></svg>
+      Source Layer
+    </a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="proof.html" class="active">Proof</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="btn">Book a Bullhorn Cleanup Call</a></li>
+      <li><a href="contact.html" class="btn">Book a Call</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
-<section class="page-hero">
+<section class="page-hero on-dark">
   <div class="wrap">
     <p class="kicker">Proof</p>
     <h1>Done inside a live agency, not from a slide deck</h1>
@@ -34,14 +47,18 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap prose">
+<section class="tight">
+  <div class="wrap prose reveal">
     <h2>The situation</h2>
     <p>A staffing agency had been running on Bullhorn for years. The original implementation left gaps — configuration decisions nobody remembered making, workflows that didn't match how the team actually worked, and no written standards for how records should be created or maintained. Over time, the usual pattern set in: duplicated and stale records, inconsistent categories, unclear lead and contact structure, and a team that used the system differently depending on who you asked.</p>
     <p>Nothing was "broken," and nobody had done anything wrong. The system just never got the finishing work — cleanup, documentation, training, adoption — that turns an installed ATS into an operating one.</p>
+  </div>
+</section>
 
+<section class="alt tight">
+  <div class="wrap prose reveal">
     <h2>The work</h2>
-    <ul>
+    <ul class="check-list">
       <li>Reviewed and restructured the CRM/ATS record structure — leads, contacts, accounts, and candidates</li>
       <li>Cleaned up candidate records, categories, and statuses so searches returned things people could trust</li>
       <li>Identified and worked through duplicate and inactive records</li>
@@ -49,42 +66,63 @@
       <li>Documented usage standards and closed process gaps between roles</li>
       <li>Worked directly with users on adoption — the unglamorous part that decides whether any of the above lasts</li>
     </ul>
-
-    <h2>What it taught me</h2>
-    <p>Every messy Bullhorn instance I've seen shares the same root cause: the implementation technically finished, but the operating layer never got built. The fix is never one big migration or a magic setting — it's methodical cleanup, clear standards, and enough follow-through that the team's habits actually change. That's exactly how I've structured the <a href="bullhorn-cleanup.html">Cleanup Sprint</a>.</p>
-
-    <h2>A note on what you won't find here</h2>
-    <p>No invented metrics, no anonymous testimonials, no "347% increase in recruiter efficiency." Client confidentiality matters more to me than marketing copy, and I'd rather show you how I think on a live call than dress up numbers on a page. If you want references as the practice grows, ask — I'll be straight with you about what I can share.</p>
   </div>
 </section>
 
-<div class="cta-band">
+<section class="tight">
+  <div class="wrap prose reveal">
+    <h2>What it taught me</h2>
+    <p>Every messy Bullhorn instance I've seen shares the same root cause: the implementation technically finished, but the operating layer never got built. The fix is never one big migration or a magic setting — it's methodical cleanup, clear standards, and enough follow-through that the team's habits actually change. That's exactly how I've structured the <a href="bullhorn-cleanup.html">Cleanup Sprint</a>.</p>
+
+    <div class="callout">
+      <h3>A note on what you won't find here</h3>
+      <p>No invented metrics, no anonymous testimonials, no "347% increase in recruiter efficiency." Client confidentiality matters more to me than marketing copy, and I'd rather show you how I think on a live call than dress up numbers on a page. If you want references as the practice grows, ask — I'll be straight with you about what I can share.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band on-dark">
   <h2>Judge for yourself on a call</h2>
   <p>Thirty minutes of your Bullhorn problems, live. You'll know quickly whether I know what I'm talking about.</p>
   <a class="btn btn-lg" href="contact.html">Book a Bullhorn Cleanup Call</a>
+  <p class="hero-note">30 minutes · Free · No pressure</p>
 </div>
 
 </main>
 
 <footer>
   <div class="wrap">
-    <div>
-      <strong>Source Layer</strong><br>
-      Bullhorn cleanup &amp; CRM/ATS support for staffing agencies<br>
-      <a href="mailto:jake@sourcelayer.co">jake@sourcelayer.co</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 3.5 8 12 12.5 20.5 8 12 3.5Z" stroke="#14724d" stroke-width="1.7" stroke-linejoin="round"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".65"/><path d="m3.5 17 8.5 4.5L20.5 17" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/></svg>
+          Source Layer
+        </a>
+        <p>Bullhorn cleanup, configuration, and adoption support for staffing and recruiting agencies. Fix the layer everything runs on.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="proof.html">Proof</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get started</h4>
+        <ul>
+          <li><a href="contact.html">Book a Cleanup Call</a></li>
+          <li><a href="mailto:jake@sourcelayer.co">jake@sourcelayer.co</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <a href="bullhorn-cleanup.html">Bullhorn Cleanup</a> ·
-      <a href="services.html">Services</a> ·
-      <a href="proof.html">Proof</a> ·
-      <a href="about.html">About</a> ·
-      <a href="contact.html">Book a Call</a>
+    <div class="footer-bottom">
+      <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc.</p>
     </div>
-  </div>
-  <div class="wrap">
-    <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc.</p>
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
