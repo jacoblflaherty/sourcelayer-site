@@ -13,7 +13,7 @@
   --ink-faint: #77827c;
   --line: #dcd6c2;
   --line-soft: #e5dfcd;
-  --white: #ffffff;
+  --white: #faf7ee; /* warm off-white — no pure #fff anywhere on site */
   --card: #fbf8ef;
 
   --dark: #0c1613;          /* hero + CTA bands */
