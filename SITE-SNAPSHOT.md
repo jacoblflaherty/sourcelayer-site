@@ -13,11 +13,11 @@ Status: **Repositioned build in `/site` — NOT YET DEPLOYED. Live site still sh
 - **Unifying idea:** "We clean up the backend of your business so your team can find things, follow a process, and stop wasting time."
 - **Tagline:** "Fix the layer everything runs on."
 - **Primary CTA sitewide:** "Book a Systems Audit" → contact.html (free 30-min Calendly call first). Lane CTAs: "Book a Bullhorn System Audit" / "Book a Workspace Cleanup Audit". Nav button: "Book an Audit".
-- **Pricing:** PUBLISHED as CAD ranges (decision July 5, 2026).
+- **Pricing:** PUBLISHED as USD ranges (switched from CAD July 5, 2026, evening — Jake's call).
 - **Voice rules:** clear, direct, practical, plainspoken, slightly sharp, not corporate. Banned: unlock, elevate, robust, seamless, game-changing, next-level, transform, end-to-end/tailored solutions, operational excellence, boomer/dinosaur/tech-shy, AI-powered transformation, agentic, future-proof, digital transformation.
 - **Hard constraints:** no "Bullhorn" in brand/logo/domain; independence disclaimer sitewide (+ Google Workspace trademark line); no invented metrics/testimonials/clients; case study anonymous and blame-free; nothing implying Bullhorn partnership/certification.
 - **Design system:** unchanged — warm paper (#faf9f5), green-black ink, green accent (#14724d), Source Serif 4 + Inter. Form styles added to style.css.
-- **Contact:** jake@sourcelayer.co · calendly.com/jacoblflaherty/30min
+- **Contact:** jacob@sourcelayer.co · calendly.com/jacoblflaherty/30min
 
 ## 2. SITEMAP
 
@@ -32,14 +32,24 @@ Status: **Repositioned build in `/site` — NOT YET DEPLOYED. Live site still sh
 3. Bullhorn Cleanup (/bullhorn-cleanup.html) — hero "Bought Bullhorn, but your team still works around it?", pain bullets, 3 engagements (Audit / Cleanup Sprint / Implementation+Training from $6,500), sprint phases, liaison, disclaimer callout
 4. Google Workspace Cleanup (/workspace-cleanup.html; nav label "Google Workspace" per Jake, July 5 2026 — do NOT rename the file, Jake reverted that) — hero "Your team shouldn't need a search party to find a file", pain bullets, cleanup + handoff deliverables, 3-step process
 5. Proof (/proof.html) — sanitized Bullhorn case study + bridge line to Workspace lane
-6. About (/about.html) — Jake's positioning, broadened; **background paragraph still a placeholder**
+6. About (/about.html) — Jake's own copy integrated July 5 (Why Source Layer exists / How I ended up doing this / What the work looks like), plus principles and "What I'm not"
 7. Book an Audit (/contact.html) — Calendly embed (primary) + short intake form (Formspree, **form ID placeholder**) + email fallback
 
 ## 3. OPEN ITEMS BEFORE DEPLOY
 
-1. **About page background paragraph** — still `[placeholder]`; need 2–3 sentences from Jake
-2. **Formspree form ID** — contact form action is `https://formspree.io/f/YOUR_FORM_ID`; create free Formspree account with jake@sourcelayer.co and paste real ID
-3. **Pricing currency** — ranges published in CAD per handoff; target market is mostly US — confirm CAD vs USD before deploy
-4. **Deploy approval** — Jake must approve before pushing live
-5. Calendly slug still generic /30min (optional rename)
-6. No blog/resources yet (deliberate, post-launch)
+1. **Deploy approval** — Jake must approve before pushing live (all content blockers now cleared)
+3. Calendly slug still generic /30min (optional rename)
+4. No blog/resources yet (deliberate, post-launch)
+5. Post-deploy: submit sitemap in Google Search Console; send a test form submission to verify Formspree delivery
+6. ~~Formspree form ID~~ DONE — wired `f/mzdlokry` into contact.html July 5 evening
+
+## 4. DONE JULY 5 2026 (evening session)
+
+- Pricing switched to **USD** (Jake's call; same numbers, relabeled — flagged as effective raise vs CAD, accepted)
+- SEO: canonical tags all pages; JSON-LD (ProfessionalService on home, Service on both lane pages); sitemap.xml; robots.txt
+- New pages: 404.html, thank-you.html (both noindex, no nav-active state)
+- Contact form: hidden `_next` → thank-you.html + `_subject` fields added
+- QA re-scan passed: links, guardrails, disclaimers (now on 9/9 pages), JSON-LD valid
+- About page: Jake's own copy integrated (implementation-gap line softened per guardrail; closing disclaimer dropped — footer carries it)
+- Headshot (plaid, IMG_5596.PNG): background recolored gray → brand green-ink, web-optimized to site/img/jake-flaherty.jpg (800w, 62KB); on About hero (side-by-side layout, .with-portrait) + small round version on contact page (.contact-who trust strip). Full-res kept at brand/jake-headshot-brand-bg.png. Vendor logos (Bullhorn/Google) deliberately NOT used — trademark risk.
+- LinkedIn banner rebuilt in brand (brand/source-layer-banner-linkedin.png, 1584×396): "Skills build the business. / Systems scale them." Source Serif + italic sage accent, layered-cube motif, sourcelayer.co. Fonts obtained via @fontsource npm packages → TTF in /tmp/fonts (sandbox).

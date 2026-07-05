@@ -27,5 +27,5 @@ The server (DigitalOcean droplet, 192.241.137.109) serves a copy of the repo's `
 - Server: DigitalOcean droplet "sourcelayer", Ubuntu 24.04, $4/mo, Toronto
 - Web server: nginx, serving /var/www/sourcelayer-site/site
 - Domain: sourcelayer.co (registered at GoDaddy, DNS at Cloudflare)
-- Email: jake@sourcelayer.co → forwards to gmail via Cloudflare Email Routing
+- Email: jacob@sourcelayer.co → forwards to gmail via Cloudflare Email Routing
 - SSL: Let's Encrypt via certbot, auto-renews
