@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Bullhorn Cleanup Call — Source Layer</title>
-<meta name="description" content="Book a free 30-minute Bullhorn Cleanup Call. Describe what's broken; get a straight read on what's behind it and what a fix involves.">
-<meta property="og:title" content="Book a Bullhorn Cleanup Call — Source Layer">
+<title>Book a Systems Audit — Source Layer</title>
+<meta name="description" content="Book a free 30-minute call. Describe what's slowing your business down; get a straight read on what's behind it and what a fix involves.">
+<meta property="og:title" content="Book a Systems Audit — Source Layer">
 <meta property="og:description" content="Free, 30 minutes. Come with your frustrations; leave with a straight read on what's likely wrong and what fixing it involves.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sourcelayer.co/contact.html">
+<link rel="canonical" href="https://sourcelayer.co/contact.html">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c1613'/%3E%3Cpath d='M32 14 12 24l20 10 20-10-20-10Z' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='m12 34 20 10 20-10' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.6'/%3E%3Cpath d='m12 44 20 10 20-10' fill='none' stroke='%237fd4ab' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +29,12 @@
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
+      <li><a href="workspace-cleanup.html">Google Workspace</a></li>
       <li><a href="proof.html">Proof</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="btn active">Book a Call</a></li>
+      <li><a href="contact.html" class="btn active">Book an Audit</a></li>
     </ul>
   </nav>
 </header>
@@ -41,9 +43,9 @@
 
 <section class="page-hero on-dark">
   <div class="wrap">
-    <p class="kicker">Book a call</p>
-    <h1>The Bullhorn Cleanup Call</h1>
-    <p class="lede">Free, 30 minutes. Come with your frustrations; leave with a straight read on what's likely wrong, what fixing it involves, and whether it's worth doing. No pitch deck, no pressure.</p>
+    <p class="kicker">Book a systems audit</p>
+    <h1>It starts with a free call</h1>
+    <p class="lede">Free, 30 minutes. Come with your frustrations — messy Drive, unreliable Bullhorn, admin that never ends — and leave with a straight read on what's likely wrong, what fixing it involves, and whether it's worth doing. No pitch deck, no pressure.</p>
   </div>
 </section>
 
@@ -51,16 +53,62 @@
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
+        <div class="contact-who">
+          <img src="img/jake-flaherty.jpg" alt="Jake Flaherty" width="56" height="56" loading="lazy">
+          <p>You'll be talking with <strong>Jake Flaherty</strong> — the person who does the work. No sales team, no handoffs.</p>
+        </div>
         <h2>What to expect</h2>
         <ul class="check-list">
-          <li>You describe what's frustrating about your Bullhorn — in plain terms, no prep needed</li>
-          <li>I tell you what's most likely behind it, based on what I've seen inside real environments</li>
+          <li>You describe what's frustrating — in plain terms, no prep needed</li>
+          <li>I tell you what's most likely behind it, based on what I've seen inside real systems</li>
           <li>You get an honest read on whether it's worth fixing — including "you don't need me for this"</li>
-          <li>If it makes sense, I'll outline the smallest engagement that actually solves it</li>
+          <li>If it makes sense, I'll outline the smallest engagement that actually solves it, with a fixed price</li>
         </ul>
+
+        <div class="form-card" style="margin-top: 2rem;">
+          <h3>Not ready to book? Tell me what's going on.</h3>
+          <p style="font-size: 0.95rem;">I'll reply by email with an honest first take — usually within a business day.</p>
+          <form action="https://formspree.io/f/mzdlokry" method="POST">
+            <input type="hidden" name="_next" value="https://sourcelayer.co/thank-you.html">
+            <input type="hidden" name="_subject" value="New Source Layer inquiry">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" type="text" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" type="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="cf-company">Company</label>
+                <input id="cf-company" type="text" name="company" autocomplete="organization">
+              </div>
+              <div class="form-field">
+                <label for="cf-area">What do you need help with?</label>
+                <select id="cf-area" name="help_area" required>
+                  <option value="" selected disabled>Choose one…</option>
+                  <option>Bullhorn cleanup</option>
+                  <option>Google Workspace cleanup</option>
+                  <option>Workflow automation</option>
+                  <option>General systems audit</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="cf-message">What's slowing you down?</label>
+                <textarea id="cf-message" name="message" required placeholder="A sentence or two is plenty."></textarea>
+              </div>
+            </div>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+            <button class="btn" type="submit">Send it</button>
+            <p class="form-note">Thanks — I'll review what you share and follow up with the best next step.</p>
+          </form>
+        </div>
+
         <div class="callout">
           <h3>Prefer email?</h3>
-          <p><a href="mailto:jake@sourcelayer.co">jake@sourcelayer.co</a> — tell me your agency size, roughly how long you've been on Bullhorn, and the single most annoying thing about it. I'll reply with an honest first take.</p>
+          <p><a href="mailto:jacob@sourcelayer.co">jacob@sourcelayer.co</a> — tell me your team size, which tools are giving you trouble, and the single most annoying thing about them. I'll reply with an honest first take.</p>
         </div>
       </div>
       <div class="reveal reveal-d1">
@@ -83,13 +131,14 @@
           <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 3.5 8 12 12.5 20.5 8 12 3.5Z" stroke="#14724d" stroke-width="1.7" stroke-linejoin="round"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".65"/><path d="m3.5 17 8.5 4.5L20.5 17" stroke="#14724d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/></svg>
           Source Layer
         </a>
-        <p>Bullhorn cleanup, configuration, and adoption support for staffing and recruiting agencies. Fix the layer everything runs on.</p>
+        <p>Business systems cleanup &amp; implementation for owner-led businesses — Bullhorn cleanup for staffing agencies, Google Workspace cleanup for everyone else. Fix the layer everything runs on.</p>
       </div>
       <div class="footer-col">
         <h4>Site</h4>
         <ul>
-          <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
+          <li><a href="workspace-cleanup.html">Google Workspace</a></li>
           <li><a href="proof.html">Proof</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -97,13 +146,13 @@
       <div class="footer-col">
         <h4>Get started</h4>
         <ul>
-          <li><a href="contact.html">Book a Cleanup Call</a></li>
-          <li><a href="mailto:jake@sourcelayer.co">jake@sourcelayer.co</a></li>
+          <li><a href="contact.html">Book a Systems Audit</a></li>
+          <li><a href="mailto:jacob@sourcelayer.co">jacob@sourcelayer.co</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc.</p>
+      <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc. Google Workspace is a trademark of Google LLC.</p>
     </div>
   </div>
 </footer>
