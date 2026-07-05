@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38 28 364 344" fill="none">
+<defs><radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#7fd4ab" stop-opacity="0.10"/><stop offset="1" stop-color="#7fd4ab" stop-opacity="0"/>
+</radialGradient></defs>
+<ellipse cx="220" cy="200" rx="210" ry="140" fill="url(#glow)"/>
+<path d="M220 190 380 270 220 350 60 270Z" stroke="#7fd4ab" stroke-opacity=".16" stroke-width="1.5"/>
+<path d="M220 120 380 200 220 280 60 200Z" stroke="#7fd4ab" stroke-opacity=".36" stroke-width="1.5" fill="#7fd4ab" fill-opacity=".03"/>
+<path d="M60 130v140M380 130v140M220 210v140" stroke="#7fd4ab" stroke-opacity=".2" stroke-dasharray="2 7"/>
+<path d="M220 50 380 130 220 210 60 130Z" stroke="#7fd4ab" stroke-opacity=".85" stroke-width="1.8" fill="#0f3d2b" fill-opacity=".5"/>
+<path d="M220 90 292 126M220 90 148 126M148 126l72 36M292 126l-72 36" stroke="#7fd4ab" stroke-opacity=".32"/>
+<circle cx="220" cy="90" r="3.2" fill="#7fd4ab"/>
+<circle cx="292" cy="126" r="3.2" fill="#7fd4ab" opacity=".8"/>
+<circle cx="148" cy="126" r="3.2" fill="#7fd4ab" opacity=".8"/>
+<circle cx="220" cy="162" r="3.2" fill="#7fd4ab" opacity=".55"/>
+</svg>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Layer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Source Layer rotating-cube loading screen ----
+     A nested 3D wireframe cube spins and pulses (recreates animaytion.gif).
+     Pure CSS, no images or libraries. Paste the #sl-loader block into your
+     page just after <body>; it fades out when the page finishes loading. */
+  #sl-loader{
+    position:fixed; inset:0; z-index:9999;
+    background:#0a1310;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:28px;
+    transition:opacity .6s ease, visibility .6s ease;
+  }
+  #sl-loader.sl-hidden{opacity:0; visibility:hidden; pointer-events:none;}
+
+  .sl-scene{perspective:820px; width:300px; height:300px; display:flex; align-items:center; justify-content:center;}
+  .sl-pulse{transform-style:preserve-3d; animation:sl-pulse 4.6s ease-in-out infinite;}
+  @keyframes sl-pulse{0%,100%{transform:scale(1)} 50%{transform:scale(.42)}}
+  .sl-tumble{transform-style:preserve-3d; animation:sl-tumble 9s ease-in-out infinite;}
+  @keyframes sl-tumble{0%,100%{transform:rotateZ(0deg) rotateX(0deg)} 50%{transform:rotateZ(9deg) rotateX(12deg)}}
+  .sl-rotor{position:relative; width:0; height:0; transform-style:preserve-3d; animation:sl-spin 7s linear infinite;}
+  @keyframes sl-spin{0%{transform:rotateX(-22deg) rotateY(0deg)} 100%{transform:rotateX(-22deg) rotateY(360deg)}}
+
+  .sl-cube{position:absolute; transform-style:preserve-3d; left:calc(var(--s)/-2); top:calc(var(--s)/-2); width:var(--s); height:var(--s);}
+  .sl-face{position:absolute; width:var(--s); height:var(--s); border:1.5px solid #7fd4ab; box-sizing:border-box; background:rgba(127,212,171,.015);}
+  .sl-c1{opacity:.26} .sl-c2{opacity:.5} .sl-c3{opacity:1}
+
+  .sl-dots{display:flex; gap:9px;}
+  .sl-dot{width:7px; height:7px; border-radius:50%; background:#7fd4ab; animation:sl-dots 1.4s ease-in-out infinite;}
+  .sl-dot:nth-child(2){animation-delay:.18s;} .sl-dot:nth-child(3){animation-delay:.36s;}
+  @keyframes sl-dots{0%,75%,100%{opacity:.22; transform:translateY(0)} 38%{opacity:1; transform:translateY(-4px)}}
+  .sl-word{font-family:"Inter",system-ui,sans-serif; color:#bfe6d5; font-size:15px; font-weight:600; letter-spacing:.02em;}
+
+  @media (prefers-reduced-motion:reduce){
+    .sl-pulse,.sl-tumble,.sl-rotor,.sl-dot{animation:none;}
+    .sl-rotor{transform:rotateX(-22deg) rotateY(45deg);}
+  }
+  body{margin:0; background:#0a1310;}
+</style>
+</head>
+<body>
+
+<!-- ===== PASTE FROM HERE ===== -->
+<div id="sl-loader" role="status" aria-live="polite" aria-label="Loading Source Layer">
+  <div class="sl-scene"><div class="sl-pulse"><div class="sl-tumble"><div class="sl-rotor">
+    <div class="sl-cube sl-c1" style="--s:210px">
+      <i class="sl-face" style="transform:translateZ(105px)"></i>
+      <i class="sl-face" style="transform:rotateY(180deg) translateZ(105px)"></i>
+      <i class="sl-face" style="transform:rotateY(90deg) translateZ(105px)"></i>
+      <i class="sl-face" style="transform:rotateY(-90deg) translateZ(105px)"></i>
+      <i class="sl-face" style="transform:rotateX(90deg) translateZ(105px)"></i>
+      <i class="sl-face" style="transform:rotateX(-90deg) translateZ(105px)"></i>
+    </div>
+    <div class="sl-cube sl-c2" style="--s:130px">
+      <i class="sl-face" style="transform:translateZ(65px)"></i>
+      <i class="sl-face" style="transform:rotateY(180deg) translateZ(65px)"></i>
+      <i class="sl-face" style="transform:rotateY(90deg) translateZ(65px)"></i>
+      <i class="sl-face" style="transform:rotateY(-90deg) translateZ(65px)"></i>
+      <i class="sl-face" style="transform:rotateX(90deg) translateZ(65px)"></i>
+      <i class="sl-face" style="transform:rotateX(-90deg) translateZ(65px)"></i>
+    </div>
+    <div class="sl-cube sl-c3" style="--s:64px">
+      <i class="sl-face" style="transform:translateZ(32px)"></i>
+      <i class="sl-face" style="transform:rotateY(180deg) translateZ(32px)"></i>
+      <i class="sl-face" style="transform:rotateY(90deg) translateZ(32px)"></i>
+      <i class="sl-face" style="transform:rotateY(-90deg) translateZ(32px)"></i>
+      <i class="sl-face" style="transform:rotateX(90deg) translateZ(32px)"></i>
+      <i class="sl-face" style="transform:rotateX(-90deg) translateZ(32px)"></i>
+    </div>
+  </div></div></div></div>
+  <div class="sl-dots"><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
+  <div class="sl-word">Source Layer</div>
+</div>
+<script>
+  (function(){
+    var loader=document.getElementById('sl-loader');
+    if(!loader) return;
+    var start=Date.now(), minShow=1000;
+    function hide(){
+      var wait=Math.max(0, minShow-(Date.now()-start));
+      setTimeout(function(){ loader.classList.add('sl-hidden'); }, wait);
+    }
+    if(document.readyState==='complete') hide();
+    else window.addEventListener('load', hide);
+  })();
+</script>
+<!-- ===== TO HERE ===== -->
+
+</body>
+</html>

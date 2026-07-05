@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Layer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Source Layer loading screen ----
+     Drop this markup into your page (see the #sl-loader block below).
+     It covers the screen on load, then fades out when the page is ready. */
+  #sl-loader{
+    position:fixed; inset:0; z-index:9999;
+    background:#0a1310;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:28px;
+    transition:opacity .6s ease, visibility .6s ease;
+  }
+  #sl-loader.sl-hidden{opacity:0; visibility:hidden; pointer-events:none;}
+
+  .sl-ring{
+    fill:none; stroke:#7fd4ab; stroke-width:2;
+    vector-effect:non-scaling-stroke;
+    transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:sl-ripple 3.4s cubic-bezier(.2,.6,.3,1) infinite;
+  }
+  @keyframes sl-ripple{
+    0%{transform:scale(.42); opacity:0}
+    12%{opacity:.85}
+    100%{transform:scale(2.6); opacity:0}
+  }
+  .sl-logo{transform-box:fill-box; transform-origin:center; animation:sl-breathe 3.4s ease-in-out infinite;}
+  @keyframes sl-breathe{0%,100%{transform:scale(1)} 50%{transform:scale(1.05)}}
+
+  .sl-top{fill:rgba(127,212,171,.10); stroke:#8fe0ba; stroke-width:2.5; stroke-linejoin:round;}
+  .sl-mid{fill:none; stroke:#7fd4ab; stroke-width:2; stroke-linejoin:round; opacity:.5;}
+  .sl-bot{fill:none; stroke:#7fd4ab; stroke-width:2; stroke-linejoin:round; opacity:.28;}
+  .sl-conn{fill:none; stroke:#7fd4ab; stroke-width:1.4; stroke-dasharray:2 7; opacity:.4;}
+  .sl-net{fill:none; stroke:#7fd4ab; stroke-width:1.2; opacity:.55;}
+  .sl-node{fill:#7fd4ab;}
+
+  .sl-dots{display:flex; gap:9px;}
+  .sl-dot{width:7px; height:7px; border-radius:50%; background:#7fd4ab; animation:sl-dots 1.4s ease-in-out infinite;}
+  .sl-dot:nth-child(2){animation-delay:.18s;}
+  .sl-dot:nth-child(3){animation-delay:.36s;}
+  @keyframes sl-dots{0%,75%,100%{opacity:.22; transform:translateY(0)} 38%{opacity:1; transform:translateY(-4px)}}
+
+  .sl-word{font-family:"Inter",system-ui,sans-serif; color:#bfe6d5; font-size:15px; font-weight:600; letter-spacing:.02em;}
+
+  @media (prefers-reduced-motion:reduce){
+    .sl-ring,.sl-logo,.sl-dot{animation:none;}
+    .sl-ring:nth-child(2){opacity:.5;}
+  }
+
+  /* demo page background so you can preview this file on its own */
+  body{margin:0; background:#0a1310;}
+</style>
+</head>
+<body>
+
+<!-- ===== PASTE FROM HERE ===== -->
+<div id="sl-loader" role="status" aria-live="polite" aria-label="Loading Source Layer">
+  <svg viewBox="-250 -250 500 500" width="240" height="240" style="overflow:visible" aria-hidden="true">
+    <path class="sl-ring" d="M0 -150 L160 -70 L160 70 L0 150 L-160 70 L-160 -70 Z" style="animation-delay:0s"/>
+    <path class="sl-ring" d="M0 -150 L160 -70 L160 70 L0 150 L-160 70 L-160 -70 Z" style="animation-delay:.85s"/>
+    <path class="sl-ring" d="M0 -150 L160 -70 L160 70 L0 150 L-160 70 L-160 -70 Z" style="animation-delay:1.7s"/>
+    <path class="sl-ring" d="M0 -150 L160 -70 L160 70 L0 150 L-160 70 L-160 -70 Z" style="animation-delay:2.55s"/>
+    <g class="sl-logo">
+      <path class="sl-bot" d="M0 -5 L140 65 L0 135 L-140 65 Z"/>
+      <path class="sl-mid" d="M0 -65 L140 5 L0 75 L-140 5 Z"/>
+      <path class="sl-conn" d="M-140 -55 L-140 65 M140 -55 L140 65 M0 -125 L0 -5 M0 15 L0 135"/>
+      <path class="sl-top" d="M0 -125 L140 -55 L0 -15 L-140 -55 Z"/>
+      <path class="sl-net" d="M0 -90 L70 -55 L0 -20 L-70 -55 Z"/>
+      <circle class="sl-node" cx="0" cy="-90" r="4"/>
+      <circle class="sl-node" cx="70" cy="-55" r="4"/>
+      <circle class="sl-node" cx="-70" cy="-55" r="4"/>
+      <circle class="sl-node" cx="0" cy="-20" r="4"/>
+    </g>
+  </svg>
+  <div class="sl-dots"><span class="sl-dot"></span><span class="sl-dot"></span><span class="sl-dot"></span></div>
+  <div class="sl-word">Source Layer</div>
+</div>
+<script>
+  /* Hide the loader once the page has finished loading.
+     minShow keeps it up long enough to not "flash" on fast loads. */
+  (function(){
+    var loader = document.getElementById('sl-loader');
+    if(!loader) return;
+    var start = Date.now(), minShow = 900;
+    function hide(){
+      var wait = Math.max(0, minShow - (Date.now() - start));
+      setTimeout(function(){ loader.classList.add('sl-hidden'); }, wait);
+    }
+    if(document.readyState === 'complete') hide();
+    else window.addEventListener('load', hide);
+  })();
+</script>
+<!-- ===== TO HERE ===== -->
+
+</body>
+</html>
