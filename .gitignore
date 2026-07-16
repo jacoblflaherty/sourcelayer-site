@@ -1,1 +1,21 @@
 .DS_Store
+
+# internal redesign notes, not for the public site
+site/README.md
+
+# local project memory; may contain private business context
+/MEMORY.md
+/memory/
+
+# private prospecting material; never publish with the website
+/client-acquisition/
+
+# internal competitor research; never publish with the website
+Tonic HQ*
+
+# internal working material; never publish with the website
+/Bullhorn-Distress-Radar/
+/Handoff folder/
+/AGENTS.md
+/DESIGN-HANDOFF.md
+/site-OLD-backup/

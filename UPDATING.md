@@ -15,8 +15,11 @@ The server (DigitalOcean droplet, 192.241.137.109) serves a copy of the repo's `
 
    Enter the droplet root password. Site updates instantly.
 
+4. **CSS/JS changes only: purge Cloudflare cache** — Cloudflare caches stylesheets and scripts, so visitors may see the old version for a few hours after a pull. To force it: dash.cloudflare.com → sourcelayer.co → Caching → Purge Cache → Custom purge → paste the file's URL (e.g. `https://sourcelayer.co/css/style.css`). HTML changes show up immediately, no purge needed.
+
 ## Rules of thumb
 
+- Keep the local `Consulting Website/site/` folder in sync with GitHub. If they drift apart (e.g. after editing on GitHub directly), ask Claude to re-sync before editing locally — otherwise a local edit can push stale pages back up.
 - Never edit files on the server directly — changes there get overwritten by the next `git pull` and aren't backed up.
 - GitHub keeps full history: any commit can be viewed or reverted from the repo's "Commits" page.
 - HTTPS certificate renews itself (certbot). Nothing to do.

@@ -13,7 +13,7 @@
   --ink-faint: #77827c;
   --line: #dcd6c2;
   --line-soft: #e5dfcd;
-  --white: #ffffff;
+  --white: #faf7ee; /* warm off-white — no pure #fff anywhere on site */
   --card: #fbf8ef;
 
   --dark: #0c1613;          /* hero + CTA bands */
@@ -792,3 +792,10 @@ footer {
   flex-shrink: 0;
 }
 .contact-who p { margin: 0; font-size: 0.95rem; }
+
+
+/* Fix: keep form fields inside the form card (grid min-width blowout) */
+.form-field { min-width: 0; }
+.form-field input,
+.form-field select,
+.form-field textarea { width: 100%; min-width: 0; }
