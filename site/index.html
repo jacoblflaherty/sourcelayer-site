@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Source Layer — Business Systems Cleanup &amp; Implementation</title>
-<meta name="description" content="Business systems cleanup for owner-led businesses: Bullhorn cleanup for staffing agencies, Google Workspace cleanup, workflow automation, and plain-English training.">
-<meta property="og:title" content="Source Layer — Business Systems Cleanup &amp; Implementation">
-<meta property="og:description" content="You've got the team and the clients. Your backend is slowing you down. Fix the layer everything runs on.">
+<title>Source Layer — Bullhorn Cleanup &amp; Implementation for Staffing Agencies</title>
+<meta name="description" content="Independent Bullhorn cleanup for staffing agencies: system audits, data cleanup sprints, workflow repair, implementation help, and plain-English training.">
+<meta property="og:title" content="Source Layer — Bullhorn Cleanup &amp; Implementation for Staffing Agencies">
+<meta property="og:description" content="You've got the recruiters and the clients. Your Bullhorn is slowing you down. Fix the layer everything runs on.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sourcelayer.co/">
 <link rel="canonical" href="https://sourcelayer.co/">
@@ -22,17 +22,17 @@
   "name": "Source Layer",
   "url": "https://sourcelayer.co/",
   "email": "jacob@sourcelayer.co",
-  "description": "Business systems cleanup and implementation for owner-led businesses: independent Bullhorn cleanup for staffing agencies and Google Workspace cleanup for small businesses.",
+  "description": "Independent Bullhorn cleanup and implementation for staffing and recruiting agencies: system audits, data cleanup sprints, workflow repair, and training.",
   "founder": {"@type": "Person", "name": "Jake Flaherty"},
   "areaServed": ["United States", "Canada"],
-  "knowsAbout": ["Bullhorn ATS", "CRM data cleanup", "Google Workspace", "workflow automation", "staffing agency operations"],
+  "knowsAbout": ["Bullhorn ATS", "CRM data cleanup", "Bullhorn REST API", "workflow automation", "staffing agency operations", "recruiting operations"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Systems Audit"}, "priceCurrency": "USD"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bullhorn System Audit"}, "priceCurrency": "USD"},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bullhorn Cleanup Sprint"}, "priceCurrency": "USD"},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Workspace Cleanup"}, "priceCurrency": "USD"},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bullhorn Implementation + Training"}, "priceCurrency": "USD"},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monthly Systems Support"}, "priceCurrency": "USD"}
     ]
   }
@@ -54,10 +54,9 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
-      <li><a href="workspace-cleanup.html">Google Workspace</a></li>
       <li><a href="proof.html">Proof</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="btn">Book an Audit</a></li>
+      <li><a href="contact.html" class="btn">Book a Free Call</a></li>
     </ul>
   </nav>
 </header>
@@ -67,14 +66,14 @@
 <section class="hero on-dark">
   <div class="wrap">
     <div>
-      <p class="kicker">Business systems cleanup &amp; implementation</p>
-      <h1>You've got the team and the clients. Your backend is slowing you down. <em>Fix the layer everything runs on.</em></h1>
-      <p class="lede">I help owner-led businesses clean up messy files, workflows, software, and admin systems — so your team can find what they need, follow a clear process, and stop wasting time. Two specialties: Bullhorn for staffing agencies, and Google Workspace for everyone else. And if AI is on your roadmap, this is step one — every AI tool runs on the data and process underneath it.</p>
+      <p class="kicker">Bullhorn cleanup &amp; implementation for staffing agencies</p>
+      <h1>You've got the recruiters and the clients. Your Bullhorn is slowing you down. <em>Fix the layer everything runs on.</em></h1>
+      <p class="lede">I help staffing and recruiting agencies clean up messy Bullhorn environments — records, workflows, statuses, reporting, and adoption — so recruiters trust the system instead of working around it. And if AI is on your roadmap, this is step one: Bullhorn's AI features run on the same data your team doesn't trust today.</p>
       <div class="btn-row">
-        <a class="btn btn-lg" href="contact.html">Book a Systems Audit</a>
+        <a class="btn btn-lg" href="contact.html">Book a Free Discovery Call</a>
         <a class="btn btn-lg btn-ghost" href="services.html">See how I help</a>
       </div>
-      <p class="hero-note"><strong>It starts with a free 30-minute call.</strong> You'll leave with a clear read on what's slowing you down, whether or not we work together.</p>
+      <p class="hero-note"><strong>The call is free — 30 minutes, no commitment.</strong> The paid audit comes later, and only if we both agree there's a problem worth fixing.</p>
     </div>
     <div class="hero-art" aria-hidden="true">
       <svg viewBox="0 0 440 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,53 +105,51 @@
       <h2>Sound familiar?</h2>
     </div>
     <ul class="pain-list">
-      <li class="reveal">Important files live in five different places, and nobody knows which version is current</li>
-      <li class="reveal reveal-d1">Staff rely on memory instead of a process — and keep asking the owner where things are</li>
-      <li class="reveal">Software was purchased but never fully adopted, so the team works around it</li>
-      <li class="reveal reveal-d1">Spreadsheets are doing work the actual system should be doing</li>
-      <li class="reveal">Repeated admin tasks are done by hand, the same way, every week</li>
-      <li class="reveal reveal-d1">Admin work keeps pulling the team away from the work that makes money</li>
+      <li class="reveal">Recruiters avoid Bullhorn — the real pipeline lives in spreadsheets, inboxes, and memory</li>
+      <li class="reveal reveal-d1">Searches are a gamble because categories, skills, and statuses were never set up properly</li>
+      <li class="reveal">Leads, contacts, and companies aren't clearly structured, so the sales funnel has no shape</li>
+      <li class="reveal reveal-d1">Reporting doesn't show what's really happening, so decisions run on gut feel</li>
+      <li class="reveal">Implementation happened, but adoption didn't — and nobody was trained properly</li>
+      <li class="reveal reveal-d1">You're paying for the system every month, and it still feels like overhead</li>
     </ul>
-    <p class="pain-closer reveal">None of this means your team failed. It usually means the tools were never finished — no cleanup, no structure, no standards, no training. <strong>That's the gap I fill.</strong></p>
+    <p class="pain-closer reveal">None of this means your team failed. It usually means the implementation stopped before the system was finished — no cleanup, no structure, no standards, no training. <strong>That's the gap I fill.</strong></p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">Two ways in</p>
-      <h2>Pick the lane that sounds like your business</h2>
+      <p class="kicker">Proof, not promises</p>
+      <h2>I've rebuilt a live Bullhorn environment at the database layer</h2>
+      <p>Not advice from a slide deck — hands-on work inside a working agency's Bullhorn Enterprise instance, while the team kept selling and recruiting around me. What I built there:</p>
     </div>
-    <div class="grid grid-2" style="align-items: stretch;">
-      <div class="card tier reveal">
-        <div class="tier-body">
-          <p class="kicker">For staffing &amp; recruiting agencies</p>
-          <h3>Bullhorn &amp; Recruiting Systems</h3>
-          <p>You're on Bullhorn (or a similar ATS/CRM), but the team works around it: messy records, unclear workflows, reports nobody trusts, spreadsheets on the side.</p>
-          <ul class="check-list">
-            <li>Bullhorn system audits and data cleanup</li>
-            <li>Workflow repair and lead/contact process design</li>
-            <li>Support liaison — I deal with Bullhorn tickets for you</li>
-            <li>Team training and implementation support</li>
-          </ul>
-        </div>
-        <a class="arrow-link" href="bullhorn-cleanup.html">View Bullhorn Cleanup</a>
+    <div class="scope-grid">
+      <div class="scope-item reveal">
+        <h3>5,821 candidate records audited</h3>
+        <p>Rebuilt the category taxonomy from scratch — 9 clean, recruiter-validated categories — and ran a structured bulk-tagging operation mapping the full database to it, so every search returns people the team can trust.</p>
       </div>
-      <div class="card tier reveal reveal-d1">
-        <div class="tier-body">
-          <p class="kicker">For owner-led businesses</p>
-          <h3>Google Workspace &amp; Business Operations</h3>
-          <p>Your daily operations are buried in Gmail, Drive, Docs, Sheets, Forms, and Calendar — with scattered files, messy permissions, and manual admin holding everything together.</p>
-          <ul class="check-list">
-            <li>Google Drive cleanup and Shared Drive structure</li>
-            <li>Permissions review, templates, and SOPs</li>
-            <li>Forms, intake flows, and lightweight automation</li>
-            <li>Plain-English team training</li>
-          </ul>
-        </div>
-        <a class="arrow-link" href="workspace-cleanup.html">View Google Workspace Cleanup</a>
+      <div class="scope-item reveal reveal-d1">
+        <h3>13 statuses consolidated into one working model</h3>
+        <p>Moved 2,683 records out of ambiguity buckets and organized 3,601 dormant candidates into structured re-engagement lists instead of dead weight.</p>
+      </div>
+      <div class="scope-item reveal">
+        <h3>A 221-lead sales pipeline, built from the object model up</h3>
+        <p>Defined what Lead, Contact, Company, and Job Order mean operationally, converted misfiled records, and stood up a full lifecycle with lead-source attribution — pipeline visibility where there was none.</p>
+      </div>
+      <div class="scope-item reveal reveal-d1">
+        <h3>Bulk operations through the Bullhorn REST API</h3>
+        <p>Secured and structured API access for mass updates and automation beyond what the interface allows — including an automation that keeps eligible candidates visible after assignments end.</p>
+      </div>
+      <div class="scope-item reveal">
+        <h3>A 17-certification compliance framework</h3>
+        <p>Expiry tracking across licenses, equipment, and safety certifications — stood up from nothing, maintained in the system, not a spreadsheet.</p>
+      </div>
+      <div class="scope-item reveal reveal-d1">
+        <h3>SOPs, training, and adoption</h3>
+        <p>Written usage standards, role-based training, and a 379-record triage tracker — the unglamorous work that decides whether any cleanup lasts.</p>
       </div>
     </div>
+    <p class="pain-closer reveal"><a class="arrow-link" href="proof.html">Read the full story</a></p>
   </div>
 </section>
 
@@ -164,14 +161,14 @@
     </div>
     <div class="steps">
       <div class="step reveal">
-        <span class="step-tag">Fixed fee</span>
+        <span class="step-tag">$2,500 flat · credited toward cleanup</span>
         <h3>Audit</h3>
-        <p>I review your current systems, files, workflows, software setup, and team pain points. You get a clear diagnosis of what's slowing the business down and what to fix first.</p>
+        <p>After a free discovery call — and only if we agree there's something worth fixing — I go through your Bullhorn environment: data health, structure, fields and statuses, workflows, usage, and reporting. You get a written findings report and a roadmap any admin could execute.</p>
       </div>
       <div class="step reveal reveal-d1">
         <span class="step-tag">Fixed scope</span>
         <h3>Clean up</h3>
-        <p>I fix the structure, remove duplication, organize the workspace, and build practical workflows your team can actually follow — no new software to buy.</p>
+        <p>I execute the audit's priority list: record cleanup, taxonomy repair, status rationalization, workflow redesign, and usage standards your team can actually follow — no new software to buy.</p>
       </div>
       <div class="step reveal reveal-d2">
         <span class="step-tag">Included</span>
@@ -190,31 +187,31 @@
     </div>
     <div class="scope-grid">
       <div class="scope-item reveal">
-        <h3>Systems Audit — $750–$1,500</h3>
-        <p>A practical review of your tools, files, workflows, and admin bottlenecks, with a prioritized fix list.</p>
-      </div>
-      <div class="scope-item reveal reveal-d1">
-        <h3>Google Workspace Cleanup — $1,500–$3,500</h3>
-        <p>Drive structure, permissions, templates, intake flows, SOPs, and training — so your team stops losing time in tools you already pay for.</p>
-      </div>
-      <div class="scope-item reveal">
         <h3>Bullhorn System Audit — $2,500 flat</h3>
-        <p>Find out why your team isn't getting full value from Bullhorn and what needs to be fixed first.</p>
+        <p>Find out why your team isn't getting full value from Bullhorn and what needs to be fixed first. Written findings report and roadmap included. Book a cleanup within 30 days and the audit fee is credited in full.</p>
       </div>
       <div class="scope-item reveal reveal-d1">
         <h3>Bullhorn Cleanup Sprint — $3,500–$7,500</h3>
         <p>Data cleanup, workflow redesign, process documentation, and training — the audit, executed.</p>
       </div>
       <div class="scope-item reveal">
-        <h3>Workflow Automation Setup — $2,500–$6,000</h3>
-        <p>Reduce repeated admin work with practical automations, templates, and forms — without forcing your team onto a complicated new system.</p>
+        <h3>Implementation + Training — from $6,500</h3>
+        <p>For agencies moving onto Bullhorn or rebuilding after a weak initial implementation: planning, workflow design, configuration support, and post-launch support.</p>
+      </div>
+      <div class="scope-item reveal reveal-d1">
+        <h3>Workflow Automation Sprint — $2,500–$6,000</h3>
+        <p>Structured follow-up, re-engagement, and intake workflows built on a cleaned-up system — scoped to what your license and permissions actually allow.</p>
+      </div>
+      <div class="scope-item reveal">
+        <h3>Recruiting Dashboards &amp; Reporting — $1,500–$4,000</h3>
+        <p>Turn cleaned-up data into numbers leadership can trust: pipeline, sendouts-to-hires, job order aging, recruiter activity, and time-to-fill.</p>
       </div>
       <div class="scope-item reveal reveal-d1">
         <h3>Monthly Systems Support — $750–$3,000/mo</h3>
-        <p>Ongoing help after cleanup: fixes, improvements, training refreshers, and support-ticket handling.</p>
+        <p>Ongoing help after cleanup: fixes, improvements, training refreshers, and Bullhorn support-ticket handling.</p>
       </div>
     </div>
-    <p class="pain-closer reveal" style="font-size: 0.92rem;">Prices in USD. Final quotes are fixed-fee, scoped on the call based on the size and state of your systems. <a href="services.html">Full service details →</a></p>
+    <p class="pain-closer reveal" style="font-size: 0.92rem;">Prices in USD. Every engagement starts with a free discovery call; the paid audit is the first formal step, and only happens if the call shows there's a real problem to fix. <a href="services.html">Full service details →</a></p>
   </div>
 </section>
 
@@ -223,7 +220,7 @@
     <div class="proof-teaser reveal">
       <p class="kicker">After the cleanup</p>
       <h2>Keep the system clean after the cleanup</h2>
-      <p class="lede">A cleanup project fixes the mess. Monthly support keeps it from coming back. I can stay involved after the audit or cleanup to handle workflow changes, new staff onboarding, reporting updates, support tickets, documentation, and small fixes — before they turn into another operational mess.</p>
+      <p class="lede">A cleanup project fixes the mess. Monthly support keeps it from coming back. I can stay involved after the audit or cleanup to handle workflow changes, new recruiter onboarding, reporting updates, Bullhorn support tickets, documentation, and small fixes — before they turn into another operational mess.</p>
       <a class="arrow-link" href="services.html#monthly-support">Ask about Monthly Systems Support</a>
     </div>
   </div>
@@ -233,15 +230,15 @@
   <div class="wrap reveal">
     <p class="kicker">Why Source Layer</p>
     <p class="quote">I don't sell complexity. I make the tools you already have <em>usable.</em></p>
-    <p>Too many businesses buy software and still end up running the company through messy folders, scattered spreadsheets, unclear processes, and support tickets nobody has time to chase. I clean that up — and I've done it inside a live staffing agency's Bullhorn environment, record by record, with a real team depending on it. <a href="proof.html" style="color:#7fd4ab;">Read how I work →</a></p>
+    <p>Too many agencies buy Bullhorn and still run the business through spreadsheets, inboxes, and workarounds. I fix that at the database layer, not just the screens: taxonomy design, object-model repair, status architecture, bulk operations through the REST API, and the reporting and training that make it stick. I've done it inside a live agency's Bullhorn Enterprise environment, with a real team depending on it. <a href="proof.html" style="color:#7fd4ab;">Read how I work →</a></p>
   </div>
 </section>
 
 <div class="cta-band on-dark">
-  <h2>Let's find the mess that's costing your team time</h2>
-  <p>One free call. You'll get a straight read on what's slowing your business down and what it would take to fix — whether or not you hire me.</p>
-  <a class="btn btn-lg" href="contact.html">Book a Systems Audit</a>
-  <p class="hero-note">Starts with a free 30-minute call · No pressure</p>
+  <h2>Let's find out what's actually wrong with your Bullhorn</h2>
+  <p>One free call. You'll get a straight read on what's slowing your agency down and what it would take to fix — whether or not you hire me.</p>
+  <a class="btn btn-lg" href="contact.html">Book a Free Discovery Call</a>
+  <p class="hero-note">Free 30-minute call · The paid audit only happens if we agree it's worth it</p>
 </div>
 
 </main>
@@ -254,28 +251,27 @@
           <svg class="logo-mark" width="24" height="24" viewBox="38 28 364 344" fill="none" aria-hidden="true"><path d="M220 190 380 270 220 350 60 270Z" stroke="#14724d" stroke-opacity=".3" stroke-width="14" stroke-linejoin="round"/><path d="M220 120 380 200 220 280 60 200Z" stroke="#14724d" stroke-opacity=".55" stroke-width="14" stroke-linejoin="round" fill="#14724d" fill-opacity=".04"/><path d="M60 130v140M380 130v140M220 210v140" stroke="#14724d" stroke-opacity=".22" stroke-width="9"/><path d="M220 50 380 130 220 210 60 130Z" stroke="#14724d" stroke-width="17" stroke-linejoin="round" fill="#14724d" fill-opacity=".08"/><path d="M220 90 292 126M220 90 148 126M148 126l72 36M292 126l-72 36" stroke="#14724d" stroke-opacity=".45" stroke-width="9"/><circle cx="220" cy="90" r="7" fill="#14724d"/><circle cx="292" cy="126" r="6" fill="#14724d" opacity=".8"/><circle cx="148" cy="126" r="6" fill="#14724d" opacity=".8"/><circle cx="220" cy="162" r="6" fill="#14724d" opacity=".55"/></svg>
           Source Layer
         </a>
-        <p>Business systems cleanup &amp; implementation for owner-led businesses — Bullhorn cleanup for staffing agencies, Google Workspace cleanup for everyone else. Fix the layer everything runs on.</p>
+        <p>Independent Bullhorn cleanup, workflow repair, and systems implementation for staffing and recruiting agencies. Fix the layer everything runs on.</p>
       </div>
       <div class="footer-col">
         <h4>Site</h4>
         <ul>
           <li><a href="services.html">Services</a></li>
           <li><a href="bullhorn-cleanup.html">Bullhorn Cleanup</a></li>
-          <li><a href="workspace-cleanup.html">Google Workspace</a></li>
-          <li><a href="proof.html">Proof</a></li>
+              <li><a href="proof.html">Proof</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Get started</h4>
         <ul>
-          <li><a href="contact.html">Book a Systems Audit</a></li>
+          <li><a href="contact.html">Book a Free Discovery Call</a></li>
           <li><a href="mailto:jacob@sourcelayer.co">jacob@sourcelayer.co</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc. Google Workspace is a trademark of Google LLC.</p>
+      <p class="disclaimer">Source Layer is an independent consulting practice and is not affiliated with, endorsed by, or certified by Bullhorn, Inc. Bullhorn is a registered trademark of Bullhorn, Inc.</p>
     </div>
   </div>
 </footer>
