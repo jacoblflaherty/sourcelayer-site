@@ -479,8 +479,8 @@ main section.tight{padding:64px 0}
 :where(.card) .kicker{margin-bottom:6px}
 :where(.bh-check-mount){min-height:340px}
 /* Checkmark alignment — flex for reliable first-line centering */
-.on-dark .check-list li,.stage-audit .check-list li,.prose .check-list li{display:flex;align-items:flex-start;gap:9px;padding-left:0}
-.on-dark .check-list li::before,.stage-audit .check-list li::before,.prose .check-list li::before{position:static;flex:0 0 15px;width:15px;height:1.62em}
+.on-dark .check-list li,.stage-audit .check-list li,.prose .check-list li,.check-landing .check-list li,.card .check-list li{display:flex;align-items:flex-start;gap:9px;padding-left:0}
+.on-dark .check-list li::before,.stage-audit .check-list li::before,.prose .check-list li::before,.check-landing .check-list li::before,.card .check-list li::before{position:static;flex:0 0 15px;width:15px;height:1.62em}
 /* Proof — editorial two-column, one dominant metric */
 .proof-sec{padding-top:74px}
 .proof-duo{display:grid;grid-template-columns:1.12fr .88fr;gap:0;align-items:start}
